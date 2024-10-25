@@ -1,11 +1,6 @@
 pipeline {
     agent any
-    stages {
-        stage('Remove existing github workspace') {
-            steps {
-                bat 'git rm -rf isa2/2335_ISA2'
-            }
-        }  
+    stages { 
         stage('Clone Github repo') {
             steps {
                 bat 'git clone "https://github.com/Journey-2/2335_ISA2.git"'
