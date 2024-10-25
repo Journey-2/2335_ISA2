@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Clone Github repo') {
             steps {
-                bat 'git rm -rf 2335_ISA2 && git clone "https://github.com/Journey-2/2335_ISA2.git"'
+                bat 'git clone "https://github.com/Journey-2/2335_ISA2.git"'
             }
        }
         stage('Build Image') {
@@ -21,5 +21,10 @@ pipeline {
                 bat 'docker run -d --name isa2-container isa2-image:1.0'
             }
         }
+        stage('Remove existing github workspace') {
+            steps {
+                bat 'git rm -rf 2335_ISA2'
+            }
+        }   
     }
 }
