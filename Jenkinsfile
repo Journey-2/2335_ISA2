@@ -8,17 +8,17 @@ pipeline {
         }
         stage('Build Image') {
             steps {
-                bat 'docker build -t "ISA2-image:1.0" .'
+                bat 'docker build -t "isa2-image:1.0" .'
             }
         }
         stage('Remove existing container') {
             steps {
-                bat 'docker rm -f ISA2 || true'
+                bat 'docker rm -f isa2-container || true'
             }
         }
         stage('Run container') {
             steps {
-                bat 'docker run -d --name ISA2 ISA2-image:1.0'
+                bat 'docker run -d --name isa2-container isa2-image:1.0'
             }
         }
     }
