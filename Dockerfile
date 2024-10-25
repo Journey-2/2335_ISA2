@@ -7,4 +7,4 @@ RUN apt-get install -y python3-flask
 
 COPY . /opt/app
 
-ENTRYPOINT FLASK_APP=/opt/zpp/application.py flask run
+ENTRYPOINT FLASK_APP=/opt/app/application.py flask run
