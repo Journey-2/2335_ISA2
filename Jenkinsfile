@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Remove existing github workspace') {
             steps {
-                bat 'git rm -rf 2335_ISA2'
+                bat 'git rm -rf isa2'
             }
         }  
         stage('Clone Github repo') {
