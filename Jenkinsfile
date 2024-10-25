@@ -1,6 +1,5 @@
 pipeline {
     agent any
-
     stages {
         stage('Clone Github repo') {
             steps {
@@ -23,4 +22,4 @@ pipeline {
             }
         }
     }
-    }
+}
