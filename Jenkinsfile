@@ -2,6 +2,9 @@ pipeline {
     agent any
     stages {
         stage('Clone Github repo') {
+            when {
+                destination_path == 'null'
+            }
             steps {
                 bat 'git clone "https://github.com/Journey-2/2335_ISA2.git"'
             }
