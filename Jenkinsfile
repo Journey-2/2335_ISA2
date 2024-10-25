@@ -8,12 +8,12 @@ pipeline {
         }
         stage('Remove existing container') {
             steps {
-                bat 'docker rm -f isa2-container || true'
+                bat 'docker rm -f 2335-container || true'
             }
         }
         stage('Run container') {
             steps {
-                bat 'docker run -d --name isa2-container isa2-image:1.0'
+                bat 'docker run -d --name 2335-container isa2-image:1.0'
             }
         } 
     }
