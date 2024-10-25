@@ -3,7 +3,7 @@ pipeline {
     stages { 
         stage('Clone Github repo') {
             steps {
-                bat 'rm -r ../isa2 && git clone "https://github.com/Journey-2/2335_ISA2.git"'
+                bat 'git clone "https://github.com/Journey-2/2335_ISA2.git"'
             }
        }
         stage('Build Image') {
