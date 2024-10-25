@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('Clone Github repo') {
+        stage('Remove existing Github repo') {
             steps {
                 bat 'git rm -rf "https://github.com/Journey-2/2335_ISA2.git" || true'
             }
